@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website | Home</title>
+
+    <title>Bryton Bergren | Home</title>
 
     <style>
+        /* Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        /* Main Page */
         body {
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
@@ -19,33 +22,30 @@
             line-height: 1.6;
         }
 
-        /* Navigation Bar */
+        /* Navigation */
         nav {
-            background-color: #333;
-            padding: 15px 40px;
+            position: absolute;
+            top: 25px;
+            left: 30px;
+            z-index: 1000;
+        }
+
+        .navigation-menu {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
+            gap: 12px;
         }
 
-        nav h2 {
-            color: white;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
-
-        nav a {
-            color: white;
+        .navigation-menu a {
+            color: #333;
             text-decoration: none;
+            font-size: 17px;
             font-weight: bold;
+            transition: color 0.2s ease;
         }
 
-        nav a:hover {
-            color: #ccc;
+        .navigation-menu a:hover {
+            color: #777;
         }
 
         /* Hero Section */
@@ -74,6 +74,7 @@
             margin-bottom: 30px;
         }
 
+        /* Button */
         .button {
             display: inline-block;
             padding: 12px 25px;
@@ -82,6 +83,7 @@
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
+            transition: background-color 0.2s ease;
         }
 
         .button:hover {
@@ -121,21 +123,12 @@
 
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <h2> Bryton Bergren </h2>
-
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="portfolio.html">My Work</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <!-- Navigation will be created by JavaScript -->
 
     <!-- Homepage Introduction -->
     <section class="hero">
         <div class="hero-content">
+
             <h1>Welcome to My Website</h1>
 
             <p>
@@ -144,21 +137,26 @@
                 sports, storytelling and connecting with audiences.
             </p>
 
-            <a href="about.html" class="button">Learn More About Me</a>
+            <a href="about.html" class="button">
+                Learn More About Me
+            </a>
+
         </div>
     </section>
 
     <!-- About Preview -->
     <section class="about">
         <div class="about-content">
+
             <h2>Who I Am</h2>
 
             <p>
-                This website is a place where I share my work,
-                interests, experiences and goals. Explore my website
-                to learn more about me and see what I'm working toward
-                in the world of sports media and communication.
+                This website is a place where I share my education,
+                work experience, projects, interests and goals.
+                Explore the navigation menu to learn more about me
+                and my work in sports media and communication.
             </p>
+
         </div>
     </section>
 
@@ -166,6 +164,44 @@
     <footer>
         <p>&copy; 2026 Bryton Bergren. All Rights Reserved.</p>
     </footer>
+
+    <!-- JavaScript Navigation -->
+    <script>
+        // Create the navigation bar
+        const navigation = document.createElement("nav");
+
+        // Create the navigation menu
+        navigation.innerHTML = `
+            <div class="navigation-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="education.html">Education</a>
+                <a href="work.html">Work Experience</a>
+                <a href="projects.html">Projects</a>
+            </div>
+        `;
+
+        // Add the navigation to the top of the webpage
+        document.body.prepend(navigation);
+
+        // Highlight the current page
+        const currentPage = window.location.pathname.split("/").pop();
+
+        const navigationLinks = document.querySelectorAll(
+            ".navigation-menu a"
+        );
+
+        navigationLinks.forEach(link => {
+            const linkPage = link.getAttribute("href");
+
+            if (
+                linkPage === currentPage ||
+                (currentPage === "" && linkPage === "index.html")
+            ) {
+                link.style.textDecoration = "underline";
+            }
+        });
+    </script>
 
 </body>
 </html>
