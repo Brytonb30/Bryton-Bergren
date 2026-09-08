@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Navigation structure
+  // Navigation structure - Updated Primary Links
   const primaryLinks = [
     { name: "Home", url: "index.html" },
-    { name: "About", url: "#about" },
-    { name: "Services", url: "#services" },
-    { name: "Contact", url: "#contact" }
+    { name: "About me", url: "#about" },
+    { name: "My work", url: "#work" },
+    { name: "Education", url: "#education" }
   ];
 
   const secondaryLinks = [
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   }
 
-  // 3. Optional: Add interactive hover class to key page blocks
+  // 3. Add interactive hover indicators to key page blocks
   const hoverableBlocks = document.querySelectorAll('.hero-image, .info-graphics, .main-content');
   hoverableBlocks.forEach(block => {
     block.classList.add('interactive-hover');
