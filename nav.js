@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Define navigation links central structure
+  // Navigation structure
   const primaryLinks = [
     { name: "Home", url: "index.html" },
     { name: "About", url: "#about" },
@@ -20,18 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
       `</ul>`;
   }
 
-  // 1. Render Top Header Navigators
+  // 1. Render Top Header Navigation
   const topPrimaryNav = document.getElementById("top-primary-nav");
   const topSecondaryNav = document.getElementById("top-secondary-nav");
 
-  if (topPrimaryNav) {
-    topPrimaryNav.innerHTML = buildNavList(primaryLinks);
-  }
-  if (topSecondaryNav) {
-    topSecondaryNav.innerHTML = buildNavList(secondaryLinks);
-  }
+  if (topPrimaryNav) topPrimaryNav.innerHTML = buildNavList(primaryLinks, "nav-list");
+  if (topSecondaryNav) topSecondaryNav.innerHTML = buildNavList(secondaryLinks, "nav-list");
 
-  // 2. Render Left Sidebar Navigators
+  // 2. Render Left Sidebar Navigation
   const leftSidebarNav = document.getElementById("left-sidebar-nav");
 
   if (leftSidebarNav) {
@@ -46,4 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `;
   }
+
+  // 3. Optional: Add interactive hover class to key page blocks
+  const hoverableBlocks = document.querySelectorAll('.hero-image, .info-graphics, .main-content');
+  hoverableBlocks.forEach(block => {
+    block.classList.add('interactive-hover');
+  });
 });
