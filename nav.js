@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Navigation structure - Updated Primary Links
+  // Primary Navigation
   const primaryLinks = [
     { name: "Home", url: "index.html" },
     { name: "About me", url: "#about" },
@@ -7,8 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "Education", url: "#education" }
   ];
 
+  // Updated Secondary Navigation
   const secondaryLinks = [
-    { name: "FAQ", url: "#faq" },
+    { name: "Contact", url: "#contact" },
     { name: "Support", url: "#support" },
     { name: "Terms", url: "#terms" }
   ];
