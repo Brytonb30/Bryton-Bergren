@@ -9,13 +9,13 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.5;
   color: #333;
-  /* Sky Blue outer margins (10% left/right) */
+  /* Sky Blue outer margins (10% left & right) */
   background-color: #00BFFF; 
   padding: 0 10%;
   min-height: 100vh;
 }
 
-/* Outer Container */
+/* Outer Container (Main Site Wrapper) */
 .site-wrapper {
   background-color: #ffffff;
   border: 2px solid #000;
@@ -25,7 +25,7 @@ body {
 }
 
 /* ===================================================
-   HEADER SECTION
+   HEADER SECTION & LOGO AREA
    =================================================== */
 .site-header {
   display: grid;
@@ -34,16 +34,38 @@ body {
 }
 
 .logo-area {
+  background-color: #000000;
   border-right: 2px solid #000;
-  padding: 20px;
+  padding: 10px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
-.logo-area h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
+.logo-link {
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.05);
+}
+
+.logo-text {
+  font-family: 'Fredoka', cursive, sans-serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #FFFFFF; /* First 'b' in white */
+  letter-spacing: -14px;
+  line-height: 1;
+  display: block;
+  padding-right: 10px;
+}
+
+.teal-b {
+  color: #005B60; /* Second 'b' in Dark Teal / Turquoise */
 }
 
 .header-right {
@@ -95,9 +117,9 @@ body {
   border-radius: 3px;
 }
 
-/* Hover effect with Sky Blue accent */
+/* Sky Blue Header Nav Hover Effect */
 .nav-list a:hover {
-  color: #008bC4;
+  color: #008BC4;
   background-color: #E6F7FF;
   font-weight: bold;
 }
@@ -126,7 +148,7 @@ body {
   flex: 1;
 }
 
-/* LEFT SIDEBAR: Dark Teal / Turquoise (No borders) */
+/* LEFT SIDEBAR: Dark Teal / Turquoise (No Side Borders) */
 .left-sidebar {
   border: none;
   background-color: #005B60;
@@ -217,7 +239,7 @@ body {
 }
 
 .sticky-content li:hover {
-  color: #008bC4;
+  color: #008BC4;
   background-color: #E6F7FF;
   cursor: pointer;
 }
@@ -263,7 +285,7 @@ body {
   fill: currentColor;
 }
 
-/* Mobile Responsiveness */
+/* Responsive collapse for mobile screens */
 @media (max-width: 768px) {
   body {
     padding: 0;
