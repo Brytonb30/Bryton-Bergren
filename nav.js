@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Secondary Navigation Links
   const secondaryLinks = [
-    { name: "Contact", url: "#contact" },
-    { name: "Support", url: "#support" },
-    { name: "Terms", url: "#terms" }
+    { name: "Contact", url: "contact.html" },
+    { name: "Support", url: "support.html" },
+    { name: "Terms", url: "terms.html" }
   ];
 
   // Helper function to render <ul> links
