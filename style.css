@@ -9,87 +9,19 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.5;
   color: #333;
-  /* Burnt Orange background with 10% margins on left and right */
+  /* Burnt Orange outer margins (10% left/right) */
   background-color: #CC5500; 
   padding: 0 10%;
   min-height: 100vh;
 }
 
-/* Outer Container (Main Site Wrapper) */
+/* Outer Container */
 .site-wrapper {
   background-color: #ffffff;
   border: 2px solid #000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-/* Generic borders to match wireframe style */
-header, section, aside, footer, nav, div {
-  border-color: #000;
-}
-
-/* ===================================================
-   HOVER INDICATOR STYLES (Burnt Orange: #CC5500)
-   =================================================== */
-
-/* 1. Generic interactive block indicator on hover */
-.interactive-hover {
-  transition: border-left 0.2s ease, background-color 0.2s ease;
-}
-
-.interactive-hover:hover {
-  border-left: 5px solid #CC5500 !important;
-  background-color: #fffaf5;
-}
-
-/* 2. Top Navigation Hover Indicator */
-.nav-list a {
-  position: relative;
-  text-decoration: none;
-  color: #000;
-  padding: 4px 8px;
-  transition: color 0.2s ease, background-color 0.2s ease;
-  border-radius: 3px;
-}
-
-.nav-list a:hover {
-  color: #CC5500;
-  background-color: #fff0e6;
-  font-weight: bold;
-}
-
-/* Burnt orange bottom bar indicator under header links */
-.nav-list a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 3px;
-  bottom: -2px;
-  left: 0;
-  background-color: #CC5500;
-  transition: width 0.25s ease-in-out;
-}
-
-.nav-list a:hover::after {
-  width: 100%;
-}
-
-/* 3. Left Sidebar Navigation Hover Indicator */
-.sidebar-list a {
-  display: block;
-  text-decoration: none;
-  color: #000;
-  padding: 6px 10px;
-  border-left: 3px solid transparent;
-  transition: all 0.2s ease;
-}
-
-.sidebar-list a:hover {
-  color: #CC5500;
-  border-left: 3px solid #CC5500;
-  background-color: #fff0e6;
-  padding-left: 14px; /* Slight offset animation */
 }
 
 /* ===================================================
@@ -147,16 +79,41 @@ header, section, aside, footer, nav, div {
   color: #555;
 }
 
-/* Navigation List Base */
-.nav-list, .sidebar-list {
+.nav-list {
   list-style: none;
   display: flex;
   justify-content: center;
   gap: 15px;
 }
 
-.sidebar-list {
-  display: block;
+.nav-list a {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  padding: 4px 8px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  border-radius: 3px;
+}
+
+.nav-list a:hover {
+  color: #CC5500;
+  background-color: #fff0e6;
+  font-weight: bold;
+}
+
+.nav-list a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -2px;
+  left: 0;
+  background-color: #CC5500;
+  transition: width 0.25s ease-in-out;
+}
+
+.nav-list a:hover::after {
+  width: 100%;
 }
 
 /* ===================================================
@@ -168,10 +125,12 @@ header, section, aside, footer, nav, div {
   flex: 1;
 }
 
-/* Left Sidebar: Navigation */
+/* LEFT SIDEBAR: Dark Teal / Turquoise (No borders) */
 .left-sidebar {
-  border-right: 2px solid #000;
-  padding: 15px;
+  border: none;
+  background-color: #005B60;
+  color: #ffffff;
+  padding: 20px 15px;
 }
 
 .left-sidebar .nav-group {
@@ -180,10 +139,34 @@ header, section, aside, footer, nav, div {
 
 .left-sidebar h3 {
   font-size: 1rem;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 4px;
 }
 
-/* Middle: Content Area */
+.sidebar-list {
+  list-style: none;
+}
+
+.sidebar-list a {
+  display: block;
+  text-decoration: none;
+  color: #e0f2f1;
+  padding: 6px 10px;
+  border-left: 3px solid transparent;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+}
+
+.sidebar-list a:hover {
+  color: #ffffff;
+  border-left: 3px solid #CC5500;
+  background-color: #CC5500;
+  padding-left: 12px;
+}
+
+/* Middle Content Area */
 .content-area {
   padding: 20px;
 }
@@ -203,7 +186,7 @@ header, section, aside, footer, nav, div {
   margin-bottom: 15px;
 }
 
-/* Right Sidebar: Sticky Content */
+/* Right Sidebar */
 .right-sidebar {
   border-left: 2px solid #000;
   padding: 15px;
@@ -237,35 +220,7 @@ header, section, aside, footer, nav, div {
 }
 
 /* ===================================================
-   FOOTER SECTION
-   =================================================== */
-.site-footer {
-  border-top: 2px solid #000;
-  padding: 15px 20px;
-  text-align: center;
-  font-size: 0.9rem;
-  background-color: #fafafa;
-}
-
-/* Responsive collapse for mobile devices */
-@media (max-width: 768px) {
-  body {
-    padding: 0;
-  }
-
-  .site-header,
-  .main-container {
-    grid-template-columns: 1fr;
-  }
-
-  .logo-area, .left-sidebar, .right-sidebar {
-    border-right: none;
-    border-left: none;
-    border-bottom: 2px solid #000;
-  }
-}
-/* ===================================================
-   FOOTER SOCIAL LINKS STYLES
+   FOOTER SECTION & SOCIAL LINKS
    =================================================== */
 .site-footer {
   border-top: 2px solid #000;
@@ -296,7 +251,6 @@ header, section, aside, footer, nav, div {
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
-/* Burnt Orange hover indicator for icons */
 .social-links a:hover {
   color: #CC5500;
   transform: translateY(-2px);
@@ -304,4 +258,21 @@ header, section, aside, footer, nav, div {
 
 .social-icon {
   fill: currentColor;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+
+  .site-header,
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-area, .left-sidebar, .right-sidebar {
+    border: none;
+    border-bottom: 2px solid #000;
+  }
 }
