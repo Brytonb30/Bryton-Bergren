@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Primary Navigation Links with updated Capitalization ("About Me" and "My Work")
   const primaryLinks = [
     { name: "Home", url: "index.html" },
-    { name: "About Me", url: "#about" },
-    { name: "My Work", url: "#work" },
-    { name: "Education", url: "#education" }
+    { name: "About Me", url: "about.html" },
+    { name: "My Work", url: "work.html" },
+    { name: "Education", url: "education.html" }
   ];
 
   // Secondary Navigation Links
