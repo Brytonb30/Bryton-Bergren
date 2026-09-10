@@ -2,16 +2,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Primary Navigation Links
   const primaryLinks = [
     { name: "Home", url: "index.html" },
-    { name: "About Me", url: "#about" },
-    { name: "My Work", url: "#work" },
-    { name: "Education", url: "#education" }
+    { name: "About Me", url: "about.html" },
+    { name: "My Work", url: "work.html" },
+    { name: "Education", url: "education.html" }
   ];
 
   // Secondary Navigation Links
   const secondaryLinks = [
-    { name: "Contact", url: "#contact" },
-    { name: "Support", url: "#support" },
-    { name: "Terms", url: "#terms" }
+    { name: "Contact", url: "contact.html" },
+    { name: "Support", url: "support.html" },
+    { name: "Terms", url: "terms.html" }
   ];
 
   // Helper function to render <ul> links
