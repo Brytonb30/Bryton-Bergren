@@ -40,20 +40,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .logo-link {
-  display: block;
-  width: 140px;
-  max-height: 100px;
+  text-decoration: none;
 }
 
-.logo-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
+.logo-text {
+  font-family: Arial, sans-serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #FFFFFF; /* First 'b' in white */
+  line-height: 1;
+}
+
+.teal-b {
+  color: #005B60; /* Second 'b' in Dark Teal */
 }
 
 .header-right {
@@ -72,7 +74,7 @@ body {
    TOP NAVIGATION BAR (Dark Teal with White Line)
    =================================================== */
 .top-nav {
-  background-color: #005B60; /* Same Dark Teal as left sidebar */
+  background-color: #005B60; /* Dark Teal */
 }
 
 .primary-nav-top,
@@ -108,10 +110,10 @@ body {
   border-radius: 3px;
 }
 
-/* Sky Blue Hover Effect */
+/* Hover Effect on Top Navigation */
 .top-nav .nav-list a:hover {
-  color: #000000; /* Text turns black on hover */
-  background-color: #00BFFF; /* Sky Blue background fill on hover */
+  color: #000000;
+  background-color: #00BFFF; /* Sky Blue fill on hover */
   font-weight: bold;
 }
 
@@ -139,7 +141,7 @@ body {
   flex: 1;
 }
 
-/* LEFT SIDEBAR: Dark Teal / Turquoise (No Side Borders) */
+/* LEFT SIDEBAR: Dark Teal / Turquoise */
 .left-sidebar {
   border: none;
   background-color: #005B60;
