@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Primary Navigation
+  // Primary Navigation Tabs
   const primaryLinks = [
     { name: "Home", url: "index.html" },
     { name: "About me", url: "#about" },
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "Education", url: "#education" }
   ];
 
-  // Updated Secondary Navigation
+  // Secondary Navigation Tabs
   const secondaryLinks = [
     { name: "Contact", url: "#contact" },
     { name: "Support", url: "#support" },
@@ -43,10 +43,4 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `;
   }
-
-  // 3. Add interactive hover indicators to key page blocks
-  const hoverableBlocks = document.querySelectorAll('.hero-image, .info-graphics, .main-content');
-  hoverableBlocks.forEach(block => {
-    block.classList.add('interactive-hover');
-  });
 });
