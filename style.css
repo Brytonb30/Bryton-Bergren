@@ -25,7 +25,7 @@ body {
 }
 
 /* ===================================================
-   HEADER SECTION & LOGO AREA
+   HEADER SECTION & SVG LOGO AREA
    =================================================== */
 .site-header {
   display: grid;
@@ -43,19 +43,25 @@ body {
 }
 
 .logo-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   text-decoration: none;
 }
 
-.logo-text {
-  font-family: Arial, sans-serif;
-  font-size: 3.5rem;
-  font-weight: bold;
-  color: #FFFFFF; /* First 'b' in white */
-  line-height: 1;
+.logo-svg {
+  width: 140px;
+  height: auto;
+  display: block;
 }
 
-.teal-b {
-  color: #005B60; /* Second 'b' in Dark Teal */
+.logo-b-white {
+  fill: #FFFFFF; /* First 'b' in white */
+}
+
+.logo-b-teal {
+  fill: #005B60; /* Second 'b' in Dark Teal */
 }
 
 .header-right {
