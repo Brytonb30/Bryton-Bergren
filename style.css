@@ -15,7 +15,7 @@ body {
   min-height: 100vh;
 }
 
-/* Outer Container (Main Site Wrapper) */
+/* Outer Container Wrapper */
 .site-wrapper {
   background-color: #ffffff;
   border: 2px solid #000;
@@ -40,32 +40,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .logo-link {
-  text-decoration: none;
-  display: inline-block;
-  transition: transform 0.2s ease;
-}
-
-.logo-link:hover {
-  transform: scale(1.05);
-}
-
-.logo-text {
-  font-family: 'Fredoka', cursive, sans-serif;
-  font-size: 4.5rem;
-  font-weight: 700;
-  font-style: italic;
-  color: #FFFFFF; /* First 'b' in white */
-  letter-spacing: -14px;
-  line-height: 1;
   display: block;
-  padding-right: 10px;
+  width: 140px;
+  max-height: 100px;
 }
 
-.teal-b {
-  color: #005B60; /* Second 'b' in Dark Teal / Turquoise */
+.logo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .header-right {
@@ -80,9 +68,11 @@ body {
   background-color: #fafafa;
 }
 
-/* Top Navigation Bar */
+/* ===================================================
+   TOP NAVIGATION BAR (Dark Teal with White Line)
+   =================================================== */
 .top-nav {
-  border-bottom: 1px solid #000;
+  background-color: #005B60; /* Same Dark Teal as left sidebar */
 }
 
 .primary-nav-top,
@@ -91,14 +81,14 @@ body {
   text-align: center;
 }
 
+/* White line separating Primary and Secondary Top Navigation */
 .primary-nav-top {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5); 
   font-weight: bold;
 }
 
 .secondary-nav-top {
   font-size: 0.9rem;
-  color: #555;
 }
 
 .nav-list {
@@ -108,23 +98,24 @@ body {
   gap: 15px;
 }
 
-.nav-list a {
+/* Links inside Top Navigation */
+.top-nav .nav-list a {
+  color: #ffffff; /* White font color */
   position: relative;
   text-decoration: none;
-  color: #000;
   padding: 4px 8px;
   transition: color 0.2s ease, background-color 0.2s ease;
   border-radius: 3px;
 }
 
-/* Sky Blue Header Nav Hover Effect */
-.nav-list a:hover {
-  color: #008BC4;
-  background-color: #E6F7FF;
+/* Sky Blue Hover Effect */
+.top-nav .nav-list a:hover {
+  color: #000000; /* Text turns black on hover */
+  background-color: #00BFFF; /* Sky Blue background fill on hover */
   font-weight: bold;
 }
 
-.nav-list a::after {
+.top-nav .nav-list a::after {
   content: '';
   position: absolute;
   width: 0;
@@ -135,7 +126,7 @@ body {
   transition: width 0.25s ease-in-out;
 }
 
-.nav-list a:hover::after {
+.top-nav .nav-list a:hover::after {
   width: 100%;
 }
 
