@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Primary Navigation Links
+  // Primary Navigation Links with updated Capitalization ("About Me" and "My Work")
   const primaryLinks = [
     { name: "Home", url: "index.html" },
-    { name: "About me", url: "#about" },
-    { name: "My work", url: "#work" },
+    { name: "About Me", url: "#about" },
+    { name: "My Work", url: "#work" },
     { name: "Education", url: "#education" }
   ];
 
