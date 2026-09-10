@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Primary Navigation Tabs
+  // Primary Navigation Links
   const primaryLinks = [
     { name: "Home", url: "index.html" },
     { name: "About me", url: "#about" },
@@ -7,28 +7,28 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "Education", url: "#education" }
   ];
 
-  // Secondary Navigation Tabs
+  // Secondary Navigation Links
   const secondaryLinks = [
     { name: "Contact", url: "#contact" },
     { name: "Support", url: "#support" },
     { name: "Terms", url: "#terms" }
   ];
 
-  // Helper function to build <ul> HTML string
+  // Helper function to render <ul> links
   function buildNavList(links, className = "nav-list") {
     return `<ul class="${className}">` + 
       links.map(link => `<li><a href="${link.url}">${link.name}</a></li>`).join("") + 
       `</ul>`;
   }
 
-  // 1. Render Top Header Navigation
+  // 1. Inject Top Navigation Elements
   const topPrimaryNav = document.getElementById("top-primary-nav");
   const topSecondaryNav = document.getElementById("top-secondary-nav");
 
   if (topPrimaryNav) topPrimaryNav.innerHTML = buildNavList(primaryLinks, "nav-list");
   if (topSecondaryNav) topSecondaryNav.innerHTML = buildNavList(secondaryLinks, "nav-list");
 
-  // 2. Render Left Sidebar Navigation
+  // 2. Inject Left Sidebar Navigation Elements
   const leftSidebarNav = document.getElementById("left-sidebar-nav");
 
   if (leftSidebarNav) {
