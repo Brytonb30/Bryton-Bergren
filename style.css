@@ -224,7 +224,7 @@ body {
 .sports-hero-content {
   position: relative;
   z-index: 2;
-  max-width: 600px;
+  max-width: 650px;
 }
 
 /* Sports Badge/Tag */
@@ -237,7 +237,7 @@ body {
   letter-spacing: 2px;
   padding: 4px 12px;
   margin-bottom: 15px;
-  transform: skewX(-12deg); /* Dynamic Slant */
+  transform: skewX(-12deg);
   box-shadow: 2px 2px 0px #000;
 }
 
@@ -256,56 +256,7 @@ body {
 .sports-subtitle {
   font-size: 1.1rem;
   color: #e0f2f1;
-  margin-bottom: 25px;
   font-weight: 500;
-}
-
-/* Call To Action Buttons */
-.sports-actions {
-  display: flex;
-  gap: 15px;
-}
-
-.sports-btn {
-  display: inline-block;
-  text-decoration: none;
-  font-weight: bold;
-  font-style: italic;
-  font-size: 0.95rem;
-  padding: 12px 24px;
-  transform: skewX(-12deg);
-  transition: all 0.2s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.primary-btn {
-  background-color: #00BFFF;
-  color: #000000;
-  border: 2px solid #00BFFF;
-  box-shadow: 3px 3px 0px #000;
-}
-
-.primary-btn:hover {
-  background-color: #ffffff;
-  border-color: #ffffff;
-  transform: skewX(-12deg) translateY(-2px);
-  box-shadow: 5px 5px 0px #000;
-}
-
-.secondary-btn {
-  background-color: transparent;
-  color: #ffffff;
-  border: 2px solid #ffffff;
-  box-shadow: 3px 3px 0px #000;
-}
-
-.secondary-btn:hover {
-  background-color: #00BFFF;
-  color: #000000;
-  border-color: #00BFFF;
-  transform: skewX(-12deg) translateY(-2px);
-  box-shadow: 5px 5px 0px #000;
 }
 
 /* Angled Accent Stripe background elements */
@@ -384,13 +335,5 @@ body {
 
   .sports-title {
     font-size: 2rem;
-  }
-
-  .sports-actions {
-    flex-direction: column;
-  }
-
-  .sports-btn {
-    text-align: center;
   }
 }
