@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Primary Navigation Links with proper capitalization
+  // Primary Navigation Links
   const primaryLinks = [
     { name: "Home", url: "index.html" },
     { name: "About Me", url: "about.html" },
@@ -7,17 +7,20 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "Education", url: "education.html" }
   ];
 
-  // Secondary Navigation Links
+  // Secondary Navigation Links - Support points directly to Google Form
   const secondaryLinks = [
     { name: "Contact", url: "contact.html" },
-    { name: "Support", url: "support.html" },
+    { name: "Support", url: "https://docs.google.com/forms/d/e/1FAIpQLSf1FjYObF4FmcFsLiQDp7AJ7fylDb8EmoK6mnkLrepKrkWAZA/viewform?usp=header", external: true },
     { name: "Terms", url: "terms.html" }
   ];
 
   // Helper function to render <ul> links
   function buildNavList(links, className = "nav-list") {
     return `<ul class="${className}">` + 
-      links.map(link => `<li><a href="${link.url}">${link.name}</a></li>`).join("") + 
+      links.map(link => {
+        const targetAttr = link.external ? 'target="_blank" rel="noopener noreferrer"' : '';
+        return `<li><a href="${link.url}" ${targetAttr}>${link.name}</a></li>`;
+      }).join("") + 
       `</ul>`;
   }
 
