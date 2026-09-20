@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Secondary Navigation Links - Support points directly to Google Form
   const secondaryLinks = [
     { name: "Contact", url: "contact.html" },
-    { name: "Support", url: "https://docs.google.com/forms/d/e/1FAIpQLSf1FjYObF4FmcFsLiQDp7AJ7fylDb8EmoK6mnkLrepKrkWAZA/viewform?usp=header", external: true },
+    { name: "Support", url: "support.html"},
     { name: "Terms", url: "terms.html" }
   ];
 
